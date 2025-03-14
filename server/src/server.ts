@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, "public"))) // Serve static files
 const server = http.createServer(app)
 const io = new Server(server, {
 	cors: {
-		origin: "http://localhost:3000", // Ensure this matches your client URL
+		origin: "https://code-sync-bmne.vercel.app/", // Ensure this matches your client URL
 		methods: ["GET", "POST"],
 		credentials: true,
 	},
