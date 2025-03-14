@@ -63,7 +63,7 @@ function ChatContextProvider({ children }: { children: ReactNode }) {
     const [messages, setMessages] = useState<ChatMessage[]>([]);
     const [isNewMessage, setIsNewMessage] = useState<boolean>(false);
     const [lastScrollHeight, setLastScrollHeight] = useState<number>(0);
-    const [isAITyping, setIsAITyping] = useState<boolean>(false);
+
 
     useEffect(() => {
         if (!socket) {
@@ -130,6 +130,7 @@ function ChatContextProvider({ children }: { children: ReactNode }) {
                 setIsNewMessage,
                 lastScrollHeight,
                 setLastScrollHeight,
+                
             }}
         >
             {children}
